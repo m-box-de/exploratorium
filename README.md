@@ -4,7 +4,7 @@ DRAFT NOTES
 TODO @Anyone: TODOs durcharbeiten
 TODO @Anyone: "> museum4punkt0: ..." anmerkungen entfernen
 TODO @Anyone: TOC aktualisieren (z.B. via VSCode plugin)
-
+TODO @Anyone: [PLATZHALTER] mit offiziellen Bezeichnern ersetzen
 ---
 
 # Exploratorium
