@@ -53,11 +53,10 @@ Dieses [ANWENDUNGSTYP] ist entstanden im Verbundprojekt _museum4punkt0 – Digit
 This [ANWENDUNGSTYP_EN] is part of the project _museum4punkt0 - Digital Strategies for the Museum of the Future_, sub-project [NAME_TEILPROJEKT_EN]. The project _museum4punkt0_ is funded by the Federal Government Commissioner for Culture and the Media in accordance with a resolution issued by the German Bundestag (Parliament of the Federal Republic of Germany). [Further information](www.museum4punkt0.de/en/)
 
 ## Installation
-
-> museum4punkt0: Geben Sie BenutzerInnen Informationen zur Installation / zum Aufsetzen der Anwendung und dazu benötigter Hard-/Software.
+![flowchart](assets/exploratorium-flowchart.svg)
 
 Die Software des [ANWENDUNGSTYP] besteht aus zwei Teilen:
-  
+
 - Eine Windows 10 basierte Desktop Applikation, der __Viewer-App__, zur Präsentation und zum interaktiven Erkunden von Medieninhalten
 - Eine Docker/OCI/Linux basierte REST API, WebApp und Datenbank, dem __Content-Management-System__ (CMS), zur Verwaltung aller Inhalte und zur Konfiguration angeschlossener Viewer-App.
 
@@ -82,7 +81,8 @@ TODO @Helge : Release package (.zip) verlinken
 
 ### Installation Content-Management-System
 
-TODO @Helge : Installation CMS ergänzen/verlinken
+Den Directus - Container befindet sich als compose-stack im Order [directus-container](directus-container).
+Bitte bachten Sie die die gesonderte [Dokumentation](directus-container/README.md).
 
 ## Benutzung
 
@@ -164,7 +164,7 @@ Die Stationen benötigen Windows 10 [WIN_VERSION] sind optimal jeweils ein [PC S
 - [Audio Spec] (optional)
 - [Mouse]
 - [Keyboard]
-  
+
 TODO @Helge: Details ergänzen/korrigieren
 
 #### Systemvoraussetzungen - Content-Management-System
