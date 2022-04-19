@@ -46,16 +46,14 @@ Senckenberg Museum für Naturkunde Görlitz - Exploratorium
 
 ## Kurzbeschreibung
 
-"Exploratorium" ist ein [ANWENDUNGSTYP] des Senckenberg Museum Görlitz bestehend aus einem physischen, freistehenden Regal in das fünf Bildschirme eingelassen sind. Vier dieser Bildschirme dienen als interaktive Terminals (Stationen). An diesen Stationen können Besucher eigenständig und unabhängig voneinander Audiovisuelle Medieninhalte (Bilder, Videos und 3D Modelle) zu den Themen A, B, C entdecken und betrachten. Die Installation versucht dabei dem Besucher einen Überblick und breitgefächertes Verständnis für die Arbeit mit einer wissenschaftlichen Sammlung in all ihren Aspekten zu vermitteln. Zusätzlich zum individuellen erkunden der Inhalte könne alle Stationen in einen moderierten Modus betrieben werden mit dem alle Stationen synchronisiert werden um die Inhalte z.B. im Rahmen einer Führung zu präsentieren.
+"Exploratorium" ist ein Multimediasystem des Senckenberg Museum Görlitz bestehend aus einem physischen, freistehenden Regal in das fünf Bildschirme eingelassen sind. Vier dieser Bildschirme dienen als interaktive Terminals (Stationen). An diesen Stationen können Besucher eigenständig und unabhängig voneinander Audiovisuelle Medieninhalte (Bilder, Videos und 3D Modelle) zu den Themen A, B, C entdecken und betrachten. Die Installation versucht dabei dem Besucher einen Überblick und breitgefächertes Verständnis für die Arbeit mit einer wissenschaftlichen Sammlung in all ihren Aspekten zu vermitteln. Zusätzlich zum individuellen erkunden der Inhalte könne alle Stationen in einen moderierten Modus betrieben werden mit dem alle Stationen synchronisiert werden um die Inhalte z.B. im Rahmen einer Führung zu präsentieren.
 
-Dieses [ANWENDUNGSTYP] ist entstanden im Verbundprojekt _museum4punkt0 – Digitale Strategien für das Museum der Zukunft_, Teilprojekt [NAME_TEILPROJEKT_DE]. Das Projekt museum4punkt0 wird gefördert durch die Beauftragte der Bundesregierung für Kultur und Medien aufgrund eines Beschlusses des Deutschen Bundestages. [Weitere Informationen](www.museum4punkt0.de)
-
-This [ANWENDUNGSTYP_EN] is part of the project _museum4punkt0 - Digital Strategies for the Museum of the Future_, sub-project [NAME_TEILPROJEKT_EN]. The project _museum4punkt0_ is funded by the Federal Government Commissioner for Culture and the Media in accordance with a resolution issued by the German Bundestag (Parliament of the Federal Republic of Germany). [Further information](www.museum4punkt0.de/en/)
+Dieses Multimediasystem ist entstanden im Verbundprojekt _museum4punkt0 – Digitale Strategien für das Museum der Zukunft_, Teilprojekt "Exploratorium". Das Projekt museum4punkt0 wird gefördert durch die Beauftragte der Bundesregierung für Kultur und Medien aufgrund eines Beschlusses des Deutschen Bundestages. [Weitere Informationen](www.museum4punkt0.de)
 
 ## Installation
 ![flowchart](assets/exploratorium-flowchart.svg)
 
-Die Software des [ANWENDUNGSTYP] besteht aus zwei Teilen:
+Die Software des Multimediasystem besteht aus zwei Teilen:
 
 - Eine Windows 10 basierte Desktop Applikation, der __Viewer-App__, zur Präsentation und zum interaktiven Erkunden von Medieninhalten
 - Eine Docker/OCI/Linux basierte REST API, WebApp und Datenbank, dem __Content-Management-System__ (CMS), zur Verwaltung aller Inhalte und zur Konfiguration angeschlossener Viewer-App.
@@ -64,7 +62,7 @@ Die Software des [ANWENDUNGSTYP] besteht aus zwei Teilen:
 
 ### Installation Viewer-App
 
-1. Unter [Releases](https://repo.foo/releases) die neueste Version des Viewers als .zip herunterladen
+1. Unter Releases die neueste Version des Viewers als .zip herunterladen
 2. Das .zip in einen beliebigen Ordner entpacken
 3. Im gewählten Ordner die Datei `Exploratorium.exe` ausführen.
 4. Während "Autostart Pending" angezeigt wird 3x in schneller folge die Taste `F2` drücken um das Settings-Menü aufzurufen
@@ -120,7 +118,7 @@ Die Viewer-Applikation selbst enthält keine Medieninhalte. Diese werden dynamis
 
 Sofern ein vollständiger Zwischenspeicher bestehend aus API-Cache und Medien-Files verfügbar ist, kann die Anwendung vollständig ohne Zugang zu einem CMS in Betrieb genommen werden.
 
-Folgende Struktur findet sich in `%APPDATA%/LocalLow/mbox/Exploratorium/` nachdem die App einmal erfolgreich gestartet wurde. Ist ein korrekt konfiguriertes CMS verfügbar wird diese Struktur automatisch erzeugt.
+Folgende Struktur findet sich in `%APPDATA%\LocalLow\mbox\Exploratorium\` nachdem die App einmal erfolgreich gestartet wurde. Ist ein korrekt konfiguriertes CMS verfügbar wird diese Struktur automatisch erzeugt.
 
 ```txt
 ./cache/directus.cache   # Aktuelle Version des Directus API Cache
@@ -153,38 +151,29 @@ Die Viewer-Applikation reagiert dynamisch auf Format und Auflösung des angeschl
 
 #### Systemvoraussetzungen - Viewer-App
 
-Die Stationen benötigen Windows 10 [WIN_VERSION] sind optimal jeweils ein [PC SPEC] mit [MONITOR SPEC] vorgesehen.
-
-- Windows 10
-- 2+ CPU Cores
+- Windows 10x64
+- 4k / UHD - Monitor
+- 2+ CPU Cores, 2Ghz
 - 16 GB RAM
 - 100 GB HDD
-- [GPU Spec]
-- [Touchscreen Spec] (optional)
-- [Audio Spec] (optional)
-- [Mouse]
-- [Keyboard]
-
-TODO @Helge: Details ergänzen/korrigieren
+- Diskete GPU empfohlen
+- Multitouch - Touchscreen (optional)
+- Lautsprecker (optional)
 
 #### Systemvoraussetzungen - Content-Management-System
 
-Für das Backend ist ein beliebiger Docker-fähiger Host notwendig. Die Leistungsfähigkeit hängt vom gewählten Host ab, kann jedoch recht sparsam gewählt werden.
+Für das Backend ist ein beliebiger Docker-fähiger Host notwendig. Die Leistungsfähigkeit hängt vom gewählten Host ab, kann jedoch recht sparsam gewählt werden. Der Host kann sowol lokal als auch in der Cloud betrieben werden.
 
 - OCI Engine
 - 2+ CPU Cores
 - 1000 MBit/s NIC
 - 100 GB HDD
 
-TODO @Helge: Details ergänzen/korrigieren
-
 ### Netzwerk / Betriebskonzept
 
 > museum4punkt0: Auch Anforderungenan Geräte / Ausstattung bzw. Systemvoraussetzungen für den Betrieb sollten hier genannt sein. Existiert zudem ein Betriebskonzept, sollten Sie dieses von hier aus per Link zugänglich machen.
 
-Zur Vernetzung von bis zu 5 Stationen inklusive Backend empfiehlt sich [NETZWERK SPEC].
-
-TODO @Helge: Details ergänzen/korrigieren
+Zur Vernetzung von bis zu fünf Stationen inklusive Backend empfiehlt sich ein verkabeltes Ethernet-Netzwerk.
 
 ## Beteiligung
 
@@ -224,7 +213,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### Proprietäre Drittanbieter Software
 
-Das [ANWENDUNGSTYP] wurde unter Verwendung der folgenden Propreitären Software erstellt. Für diese Software wird kein Quellcode mitgeliefert und eine Verwendung im Ganzen oder in Teilen ist nur im Rahmen einer binären Distribution der Anwendung und im Rahmen des ursprünglichen vereinbarten Einsatzes des [ANWENDUNGSTYP] gestattet.
+Das Multimediasystem wurde unter Verwendung der folgenden Propreitären Software erstellt. Für diese Software wird kein Quellcode mitgeliefert und eine Verwendung im Ganzen oder in Teilen ist nur im Rahmen einer binären Distribution der Anwendung und im Rahmen des ursprünglichen vereinbarten Einsatzes des Multimediasystem gestattet.
 
 - [Unity](https://unity.com/)
 - [Directus Connect](https://m-box.de)
@@ -236,7 +225,7 @@ Das [ANWENDUNGSTYP] wurde unter Verwendung der folgenden Propreitären Software 
 
 ### Drittanbieter Lizenzen
 
-Das [ANWENDUNGSTYP] wurde unter Verwendung der folgenden Freinen Open Source Software (FOSS) erstellt.
+Das Multimediasystem wurde unter Verwendung der folgenden Freinen Open Source Software (FOSS) erstellt.
 
 - Directus [GNU GENERAL PUBLIC LICENSE](https://github.com/directus/directus/blob/main/license)
   - run `npx license-checker --summary`
