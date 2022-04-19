@@ -33,7 +33,7 @@ Senckenberg Museum für Naturkunde Görlitz - Exploratorium
 
 ## Kurzbeschreibung
 
-"Exploratorium" ist ein Multimediasystem des Senckenberg Museum Görlitz bestehend aus einem physischen, freistehenden Regal in das fünf Bildschirme eingelassen sind. Vier dieser Bildschirme dienen als interaktive Terminals (Stationen). An diesen Stationen können Besucher eigenständig und unabhängig voneinander Audiovisuelle Medieninhalte (Bilder, Videos und 3D Modelle) zu den Themen A, B, C entdecken und betrachten. Die Installation versucht dabei dem Besucher einen Überblick und breitgefächertes Verständnis für die Arbeit mit einer wissenschaftlichen Sammlung in all ihren Aspekten zu vermitteln. Zusätzlich zum individuellen erkunden der Inhalte könne alle Stationen in einen moderierten Modus betrieben werden mit dem alle Stationen synchronisiert werden um die Inhalte z.B. im Rahmen einer Führung zu präsentieren.
+"Exploratorium" ist ein Multimediasystem des Senckenberg Museum Görlitz bestehend aus einem physischen, freistehenden Regal in das fünf Bildschirme eingelassen sind. Vier dieser Bildschirme dienen als interaktive Terminals (Stationen). An diesen Stationen können Besucher eigenständig und unabhängig voneinander audiovisuelle Medieninhalte (Bilder, Videos und 3D Modelle) zu den Themen [THEMEN] entdecken und betrachten. Die Installation versucht dabei dem Besucher einen Überblick und breitgefächertes Verständnis für die Arbeit mit einer wissenschaftlichen Sammlung in all ihren Aspekten zu vermitteln. Zusätzlich zum individuellen Erkunden der Inhalte kann das Multimediasystem in einen moderierten Modus betrieben werden mit dem alle Stationen synchronisiert werden um die Inhalte z.B. im Rahmen einer Führung zu präsentieren.
 
 Dieses Multimediasystem ist entstanden im Verbundprojekt _museum4punkt0 – Digitale Strategien für das Museum der Zukunft_, Teilprojekt "Exploratorium". Das Projekt museum4punkt0 wird gefördert durch die Beauftragte der Bundesregierung für Kultur und Medien aufgrund eines Beschlusses des Deutschen Bundestages. [Weitere Informationen](www.museum4punkt0.de)
 
@@ -52,21 +52,21 @@ Die Software des Multimediasystem besteht aus zwei Teilen:
 1. Unter Releases die neueste Version des Viewers als .zip herunterladen
 2. Das .zip in einen beliebigen Ordner entpacken
 3. Im gewählten Ordner die Datei `Exploratorium.exe` ausführen.
-4. Während "Autostart Pending" angezeigt wird 3x in schneller folge die Taste `F2` drücken um das Settings-Menü aufzurufen
+4. Während "Autostart Pending" angezeigt wird 3x in schneller Folge die Taste `F2` drücken um das Settings-Menü aufzurufen
 5. Es erscheint ein Button "Cancel Autostart", auf diesen Klicken bevor der Timer abgelaufen ist
 6. Im nun sichtbaren Menü die Verbindungsdaten zum CMS eintragen
-7. Die Autostart Konfiguration nach Wunsch anpassen
+7. Die Autostart-Konfiguration nach Wunsch anpassen
 8. Auf "Save Profile" klicken (die aktuellen Einstellungen sind nun gespeichert und werden beim nächsten Start automatisch angewendet)
-9. Die Applikation mit Alt+F4 beenden und wie in (3) neu starten.
-10. Die Applikation startet nun automatich mit den gespeicherten Einstellungen und beginnt die Inhalte des CMS zu vorzuladen und lokal zu speichern (Caching). Je nach Umfang der Inhalte im CMS und Geschwindigkeit der Netzwerkverbindung zum CMS kann dieses erste Caching sehr lange dauern. Der Fortschritt kann im Settings-Menü (3x `F2`) beobachtet werden.
-11. Falls das Caching fehlschlägt kann die Anwendung neu gestartet werden um das Caching an der letzten position fortzusetzen
-12. Wenn alle Inhalte geladen wurden startet die Applikation in den konfigurierten Modus. Je nach konfiguration müssen ggf. andere Instanzen der Applikation parallel gestartet werden (mehr dazu [hier](#für-ausstellungsmoderatoren) und [hier](#für-administratoren))
+9. Die Viewer-App mit Alt+F4 beenden und wie in (3) neu starten.
+10. Die Viewer-App startet nun automatich mit den gespeicherten Einstellungen und beginnt die Inhalte des CMS zu vorzuladen und lokal zu speichern (Caching). Je nach Umfang der Inhalte im CMS und Geschwindigkeit der Netzwerkverbindung zum CMS kann dieses erste Caching sehr lange dauern. Der Fortschritt kann im Settings-Menü (3x `F2`) beobachtet werden.
+11. Falls das Caching fehlschlägt kann die Viewer-App neu gestartet werden um das Caching an der letzten Position fortzusetzen
+12. Wenn alle Inhalte geladen wurden startet die Viewer-App in den konfigurierten Modus. Je nach Konfiguration müssen ggf. andere Instanzen der Viewer-App parallel gestartet werden (mehr dazu [hier](#für-ausstellungsmoderatoren) und [hier](#für-administratoren))
 
 TODO @Helge : Release package (.zip) verlinken
 
 ### Installation Content-Management-System
 
-Den Directus - Container befindet sich als compose-stack im Order [directus-container](directus-container).
+Die Container Deklaration welche das gesamte CMS beschreibt befindet sich als Docker Compose-File im Order [directus-container](directus-container).
 Bitte bachten Sie die die gesonderte [Dokumentation](directus-container/README.md).
 
 ## Benutzung
@@ -79,29 +79,29 @@ TODO @Helge : Handbuch PDF link einfügen
 
 ### Benutzung Viewer-App
 
-Die Benutzung der Anwendung unterscheidet sich grundsätzlich je nach Nutzertyp.
+Die Benutzung der Viewer-App unterscheidet sich grundsätzlich je nach Nutzertyp.
 
 #### Für Ausstellungsbesucher
 
-Die vordergründige Benutzung der Viewer-Applikation ist selbsterklärend und wurde für einen ungestüzten, autonomen Betrieb entworfen. Dieser Modus startet automatisch wenn die Anwendung lokal auf einem Rechner installiert wird.
+Die vordergründige Benutzung der Viewer-App ist selbsterklärend und wurde für einen ungestüzten, autonomen Betrieb entworfen. Dieser Modus startet automatisch wenn die Anwendung lokal auf einem Rechner installiert wird.
 
 #### Für Ausstellungsmoderatoren
 
-Neben dem autonomen Besucher-Modus verfügt die Viewer-Applikation über einen versteckten Moderator-Modus mit dem andere Instanzen der Applikation ferngesteuert werden können. Um diesen nutzen zu können muss die Applikation in einem Netzwerk und einer bestimmten Konfiguration gestartet werden. [Setup Details](#53-administrator)
+Neben dem autonomen Besucher-Modus verfügt die Viewer-Applikation über einen versteckten Moderator-Modus mit dem andere Instanzen der Viewer-App ferngesteuert werden können. Um diesen nutzen zu können muss die Viewer-App in einem Netzwerk und einer bestimmten Konfiguration gestartet werden. [Setup Details](#53-administrator)
 
 Danach befinden sich alle Stationen in ihrer konfigurierten Rolle (SOLO oder OBSERVER). Wird an einer der nun vernetzten Stationen die CONTROLLER-Rolle aktiv, dann synchronisieren sich alle verbundenen OBSERVER-Stationen mit dem Zustand der CONTROLLER Station. Es wird stets der letzten Station welche die CONTROLLER-Rolle anfordert diese auch zugewiesen, wobei die vorige CONTROLLER-Station diese Rolle verliert und in die SOLO-Rolle zurück kehrt.
 
 ##### Moderator Modus Aktivieren
 
- Ein Umschalten zwischen SOLO- und CONTROLLER-Rolle ist über einen 3-fach-Klick bzw. -Tap in der oberen rechen Bildschirm Ecke möglich. Während die CONTROLLER-Rolle aktiv ist erscheint in der Ecke ein "M". Die CONTROLLER-Rolle kann mit einem weiteren 3-fach-Klick wieder abgegeben werden.
+Ein Umschalten zwischen SOLO- und CONTROLLER-Rolle ist über einen 3-Fach-Klick bzw. -Tap in der oberen rechen Bildschirmecke möglich. Während die CONTROLLER-Rolle aktiv ist erscheint in der Ecke ein "M". Die CONTROLLER-Rolle kann mit einem weiteren 3-Fach-Klick wieder abgegeben werden.
 
 #### Für Administratoren
 
-Die Viewer-Applikation selbst enthält keine Medieninhalte. Diese werden dynamisch beim Start des _Viewers_ via REST API aus dem CMS geladen und lokal zwischengespeichert. Das CMS kann im lokalen Netzwerk oder auf einem Cloud-Server eingerichtet werden. Falls aus irgendwelchen Gründen keine Verbindung zum CMS verfügbar ist, begibt sich die Viewer-Applikation automatisch in einen Offline-Modus und nutzt die zuvor zwischengespeicherten Inhalte. Die Inhalte im CMS können mithilfe der zugehörigen WebApp verwaltet werden. Der Zwischenspeicher aktualisiert sich automatisch beim nächsten Start der Anwendung sofern das CMS erreichbar ist.
+Die Viewer-App selbst enthält keine Medieninhalte. Diese werden dynamisch beim Start via REST API aus dem CMS geladen und lokal zwischengespeichert (Caching). Das CMS kann im lokalen Netzwerk oder auf einem Cloud-Server eingerichtet werden. Falls aus irgendwelchen Gründen keine Verbindung zum CMS verfügbar ist, begibt sich die Viewer-App automatisch in einen Offline-Modus und nutzt die zuvor zwischengespeicherten Inhalte. Die Inhalte im CMS können mithilfe der zugehörigen Web-App verwaltet werden. Der Zwischenspeicher aktualisiert sich automatisch beim nächsten Start der Anwendung sofern das CMS erreichbar ist.
 
-Sofern ein vollständiger Zwischenspeicher bestehend aus API-Cache und Medien-Files verfügbar ist, kann die Anwendung vollständig ohne Zugang zu einem CMS in Betrieb genommen werden.
+Sofern ein vollständiger Zwischenspeicher bestehend aus API-Cache und Medien-Dateien verfügbar ist, kann die Anwendung vollständig ohne Zugang zu einem CMS in Betrieb genommen werden.
 
-Folgende Struktur findet sich in `%APPDATA%\LocalLow\mbox\Exploratorium\` nachdem die App einmal erfolgreich gestartet wurde. Ist ein korrekt konfiguriertes CMS verfügbar wird diese Struktur automatisch erzeugt.
+Folgende Struktur findet sich in `%APPDATA%\LocalLow\mbox\Exploratorium\` nachdem die Viewer-App einmal erfolgreich gestartet wurde. Ist ein korrekt konfiguriertes CMS verfügbar wird diese Struktur automatisch erzeugt.
 
 ```txt
 ./cache/directus.cache   # Aktuelle Version des Directus API Cache
@@ -113,7 +113,7 @@ Folgende Struktur findet sich in `%APPDATA%\LocalLow\mbox\Exploratorium\` nachde
 ./Player-prev.log        # Protokoll der vorigen App Laufzeit-Session
 ```
 
-Mit angeschlossener Tastatur sind in der Viewer-Applikation folgende Funktionen verfügbar:
+Mit angeschlossener Tastatur sind in der Viewer-App folgende Funktionen verfügbar:
 
 - `F1` zeigt ein Hilfe-Menü mit verfügbaren Tastaturbefehlen
 - `F2` zeigt ein Einstellungs-Menü mit dem die App konfiguriert werden kann, insbesondere der Backend-Zugriff und die Verbindung mit anderen Stationen im Netzwerk sind hier einstellbar. Zudem können von hieraus auch die verschiedenen Netzwerk Modi (Client/Server/Host) sowie der Zwischenspeicher der Backend-Inhalte verwaltet werden.
@@ -123,9 +123,9 @@ Mit angeschlossener Tastatur sind in der Viewer-Applikation folgende Funktionen 
 - `F10` speichert einen Screenshot des aktuellen Zustands der App
 - `Alt+F4` beendet die App
 
-Beim ersten Start der Viewer-Applikation wird eine `config.json` Datei angelegt welche die Standardkonfiguration für lokale SOLO-Stationen enthält. Diese Datei kann mittels Settings-Menü (`F2`) in der Anwendung selbst, oder von Hand editiert werden.
+Beim ersten Start der Viewer-App wird eine `config.json` Datei angelegt welche die Standardkonfiguration für lokale SOLO-Stationen enthält. Diese Datei kann mittels Settings-Menü (`F2`) in der Anwendung selbst, oder von Hand editiert werden.
 
-Das Backend besteht aus mehreren Teilen: Zunächst aus einer PostgreSQL Datenbank für alle strukturierte Inhalte, einer Directus basierten REST-API um den Datenbank-Zugriff zu abstrahieren und einer Directus basierten Web-App zur Anwendungsspezifischen Verwaltung der Datenbank-Inhalte und API. Medieninhalte (Videos, Bilder und Modelle) werden als einfache Dateien vorgehalten und von der Datenbank referenziert. Alle Teile des Backend können als Container auf jedem beliebigen OCI kompatiblen Host eingesetzt werden. Alle notwendigen Konfigurationsparameter sind im README des Container Stacks erläutert. [Link zum Container Repo](http://repos.m-box.de), [Link zur CMS Admin Doku](http://repos.m-box.de)
+Das Backend besteht aus mehreren Teilen: Zunächst aus einer PostgreSQL Datenbank für alle strukturierte Inhalte, einer Directus basierten REST-API um den Datenbank-Zugriff zu abstrahieren und einer Directus basierten Web-App zur Anwendungsspezifischen Verwaltung der Datenbank-Inhalte und API. Medieninhalte (Videos, Bilder und 3D-Modelle) werden als einfache Dateien vorgehalten und von der Datenbank referenziert. Alle Teile des Backend können als Container auf jedem beliebigen OCI kompatiblen Host eingesetzt werden. Alle notwendigen Konfigurationsparameter sind im README des Container Stacks erläutert. [Link zum Container Repo](http://repos.m-box.de), [Link zur CMS Admin Doku](http://repos.m-box.de)
 
 TODO @Helge: Container link einfügen
 TODO @Helge: Link zur CMS Doku einfügen
@@ -145,7 +145,7 @@ Die Viewer-Applikation reagiert dynamisch auf Format und Auflösung des angeschl
 
 #### Systemvoraussetzungen - Content-Management-System
 
-Für das Backend ist ein beliebiger Docker-fähiger Host notwendig. Die Leistungsfähigkeit hängt vom gewählten Host ab, kann jedoch recht sparsam gewählt werden. Der Host kann sowol lokal als auch in der Cloud betrieben werden.
+Für das Backend ist ein beliebiger OCI- bzw. Docker-fähiger Host notwendig. Die Leistungsfähigkeit hängt vom gewählten Host ab, kann jedoch recht sparsam gewählt werden. Der Host kann sowol lokal als auch in der Cloud betrieben werden.
 
 - OCI Engine
 - 2+ CPU Cores
@@ -188,7 +188,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ### Proprietäre Drittanbieter Software
 
-Das Multimediasystem wurde unter Verwendung der folgenden Propreitären Software erstellt. Für diese Software wird kein Quellcode mitgeliefert und eine Verwendung im Ganzen oder in Teilen ist nur im Rahmen einer binären Distribution der Anwendung und im Rahmen des ursprünglichen vereinbarten Einsatzes des Multimediasystem gestattet.
+Das Multimediasystem wurde unter Verwendung der folgenden propreitären Software erstellt. Für diese Software wird kein Quellcode mitgeliefert und eine Verwendung im Ganzen oder in Teilen ist nur im Rahmen einer binären Distribution der Anwendung und im Rahmen des ursprünglichen vereinbarten Einsatzes des Multimediasystems gestattet.
 
 - [Unity](https://unity.com/)
 - [Directus Connect](https://m-box.de)
@@ -200,7 +200,7 @@ Das Multimediasystem wurde unter Verwendung der folgenden Propreitären Software
 
 ### Drittanbieter Lizenzen
 
-Das Multimediasystem wurde unter Verwendung der folgenden Freinen Open Source Software (FOSS) erstellt.
+Das Multimediasystem wurde unter Verwendung der folgenden Freien Open Source Software (FOSS) erstellt.
 
 - Directus [GNU GENERAL PUBLIC LICENSE](https://github.com/directus/directus/blob/main/license)
   - run `npx license-checker --summary`
