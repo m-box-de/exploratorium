@@ -1,23 +1,10 @@
----
-
-DRAFT NOTES
-TODO @Anyone: TODOs durcharbeiten
-TODO @Anyone: "> museum4punkt0: ..." anmerkungen entfernen
-TODO @Anyone: TOC aktualisieren (z.B. via VSCode plugin)
-TODO @Anyone: [PLATZHALTER] mit offiziellen Bezeichnern ersetzen
----
-
 # Exploratorium
 
 ## Name der Anwendung
 
-<!-- Bezeichnung entspricht dem Titel der Anwendungauf der Website. Bitte achten Sie auf eine einheitliche Terminologie.-->
-
 Senckenberg Museum für Naturkunde Görlitz - Exploratorium
 
 ## Inhaltsverzeichnis
-
-> museum4punkt0: Ermöglichen Sie den LeserInnen einen Schnelleinstieg in die folgenden Kapitel des Readme. Hinweise zur Erstellung eines Inhaltsverzeichnisses finden Sie am Ende des Kapitels.-->
 
 - [Exploratorium](#exploratorium)
   - [Name der Anwendung](#name-der-anwendung)
@@ -58,7 +45,7 @@ Die Software des Multimediasystem besteht aus zwei Teilen:
 - Eine Windows 10 basierte Desktop Applikation, der __Viewer-App__, zur Präsentation und zum interaktiven Erkunden von Medieninhalten
 - Eine Docker/OCI/Linux basierte REST API, WebApp und Datenbank, dem __Content-Management-System__ (CMS), zur Verwaltung aller Inhalte und zur Konfiguration angeschlossener Viewer-App.
 
-> **Wichtiger Hinweis:** Aus rechtlichen Gründen können keine Medieninhalte in diesem Repository vorgehalten werden und eine Installation wie fortfolgend beschrieben ist ohne diese nicht lauffähig.
+**Wichtiger Hinweis:** Aus rechtlichen Gründen können keine Medieninhalte in diesem Repository vorgehalten werden und eine Installation wie fortfolgend beschrieben ist ohne diese nicht lauffähig.
 
 ### Installation Viewer-App
 
@@ -86,15 +73,11 @@ Bitte bachten Sie die die gesonderte [Dokumentation](directus-container/README.m
 
 ### Benutzung Content-Management-System
 
-> museum4punkt0: Falls Ihre Anwendung über ein Backend verfügt, sollte Ihnen ein Benutzerhandbuch für die Backend-Nutzung vorliegen. Stellen Sie dieses bitte auch zur Verfügung, indem Sie es (als PDF/A-3) im Github-Repositoriumhochladen und in der Readme-Datei darauf verlinken.
-
 Die Benutzung des Content-Management-Systems ist im [Handbuch](https://link-zum-handbuch.de/) ausführlich beschrieben.
 
 TODO @Helge : Handbuch PDF link einfügen
 
 ### Benutzung Viewer-App
-
-> museum4punkt0: Beschreiben Sie die Benutzung der Anwendung nach der Installation. Fügen Sie bestenfalls Screenshots ein, um die Handhabung zu illustrieren.
 
 Die Benutzung der Anwendung unterscheidet sich grundsätzlich je nach Nutzertyp.
 
@@ -171,15 +154,11 @@ Für das Backend ist ein beliebiger Docker-fähiger Host notwendig. Die Leistung
 
 ### Netzwerk / Betriebskonzept
 
-> museum4punkt0: Auch Anforderungenan Geräte / Ausstattung bzw. Systemvoraussetzungen für den Betrieb sollten hier genannt sein. Existiert zudem ein Betriebskonzept, sollten Sie dieses von hier aus per Link zugänglich machen.
-
 Zur Vernetzung von bis zu fünf Stationen inklusive Backend empfiehlt sich ein verkabeltes Ethernet-Netzwerk.
 
 ## Beteiligung
 
 Eine Fortlaufende Entwicklung der Anwendung ist nicht vorgesehen.
-
-> museum4punkt0: Geben Sie hier an, ob und in welcher Art man sich an Ihrer Programmierung beteiligen kann. Detailinformationen werden in einer separaten Datei angelegt. Weitere Hinweise hierzu finden Sie unter https://help.github.com/en/articles/setting-guidelines-for-repository-contributors
 
 ## Credits
 
@@ -192,14 +171,10 @@ TODO: Add Senckenberg Credits
 
 ### Autor und Rechteinhaber
 
-> museum4punkt0: AuftraggeberInnen/RechteinhaberInnen (Name Ihrer Institution) UrheberInnen (Namen der beteiligten EntwicklerInnen oder Firma). Die  AutorInnen  des  Codes  bzw.  zugehörige  Agenturen/Firmen/Institutionen  können  hier verlinkt sein (eventuell Rechteangabe nach dem Schema: Institution / UrheberIn, Jahr).
-
 - Gerold Schneider, 2022
 - m-box Bewegtbild GmbH, 2022
 
 ## Lizenz
-
-> museum4punkt0: Bitte fügen Sie ferner eine Liste der Lizenzen für wiederverwendete Programmteile Dritter der Dokumentation hinzu.
 
 __MIT License__
 
