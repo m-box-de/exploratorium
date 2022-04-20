@@ -33,14 +33,14 @@ Senckenberg Museum für Naturkunde Görlitz - Exploratorium
 
 ## Kurzbeschreibung
 
-"Exploratorium" ist ein Multimediasystem des Senckenberg Museum Görlitz bestehend aus einem physischen, freistehenden Regal in das fünf Bildschirme eingelassen sind. Vier dieser Bildschirme dienen als interaktive Terminals (Stationen). An diesen Stationen können Besucher eigenständig und unabhängig voneinander audiovisuelle Medieninhalte (Bilder, Videos und 3D Modelle) zu den Themen [THEMEN] entdecken und betrachten. Die Installation versucht dabei dem Besucher einen Überblick und breitgefächertes Verständnis für die Arbeit mit einer wissenschaftlichen Sammlung in all ihren Aspekten zu vermitteln. Zusätzlich zum individuellen Erkunden der Inhalte kann das Multimediasystem in einen moderierten Modus betrieben werden mit dem alle Stationen synchronisiert werden um die Inhalte z.B. im Rahmen einer Führung zu präsentieren.
+"Exploratorium" ist ein Multimediasystem des Senckenberg Museum Görlitz bestehend aus einem physischen, freistehenden Regal in das fünf Bildschirme eingelassen sind. Vier dieser Bildschirme dienen als interaktive Terminals (Stationen). An diesen Stationen können Besucher eigenständig und unabhängig voneinander audiovisuelle Medieninhalte (Bilder, Videos und 3D Modelle) zu den Themen Sammeln, Dokumentieren, Präparieren, Archivieren und Forschen entdecken und betrachten. Die Installation versucht dabei dem Besucher einen Überblick und breitgefächertes Verständnis für die Arbeit mit einer wissenschaftlichen Sammlung in all ihren Aspekten zu vermitteln. Zusätzlich zum individuellen Erkunden der Inhalte kann das Multimediasystem in einem moderierten Modus betrieben werden mit dem alle Stationen synchronisiert werden um die Inhalte z.B. im Rahmen einer Führung zu präsentieren.
 
 Dieses Multimediasystem ist entstanden im Verbundprojekt _museum4punkt0 – Digitale Strategien für das Museum der Zukunft_, Teilprojekt "Exploratorium". Das Projekt museum4punkt0 wird gefördert durch die Beauftragte der Bundesregierung für Kultur und Medien aufgrund eines Beschlusses des Deutschen Bundestages. [Weitere Informationen](www.museum4punkt0.de)
 
 ## Installation
 ![flowchart](assets/exploratorium-flowchart.svg)
 
-Die Software des Multimediasystem besteht aus zwei Teilen:
+Die Software des Multimediasystems besteht aus zwei Teilen:
 
 - Eine Windows 10 basierte Desktop Applikation, der __Viewer-App__, zur Präsentation und zum interaktiven Erkunden von Medieninhalten
 - Eine Docker/OCI/Linux basierte REST API, WebApp und Datenbank, dem __Content-Management-System__ (CMS), zur Verwaltung aller Inhalte und zur Konfiguration angeschlossener Viewer-App.
@@ -58,7 +58,7 @@ Die Software des Multimediasystem besteht aus zwei Teilen:
 7. Die Autostart-Konfiguration nach Wunsch anpassen
 8. Auf "Save Profile" klicken (die aktuellen Einstellungen sind nun gespeichert und werden beim nächsten Start automatisch angewendet)
 9. Die Viewer-App mit Alt+F4 beenden und wie in (3) neu starten.
-10. Die Viewer-App startet nun automatich mit den gespeicherten Einstellungen und beginnt die Inhalte des CMS zu vorzuladen und lokal zu speichern (Caching). Je nach Umfang der Inhalte im CMS und Geschwindigkeit der Netzwerkverbindung zum CMS kann dieses erste Caching sehr lange dauern. Der Fortschritt kann im Settings-Menü (3x `F2`) beobachtet werden.
+10. Die Viewer-App startet nun automatich mit den gespeicherten Einstellungen und beginnt die Inhalte des CMS vorzuladen und lokal zu speichern (Caching). Je nach Umfang der Inhalte im CMS und Geschwindigkeit der Netzwerkverbindung zum CMS kann dieses erste Caching sehr lange dauern. Der Fortschritt kann im Settings-Menü (3x `F2`) beobachtet werden.
 11. Falls das Caching fehlschlägt kann die Viewer-App neu gestartet werden um das Caching an der letzten Position fortzusetzen
 12. Wenn alle Inhalte geladen wurden startet die Viewer-App in den konfigurierten Modus. Je nach Konfiguration müssen ggf. andere Instanzen der Viewer-App parallel gestartet werden (mehr dazu [hier](#für-ausstellungsmoderatoren) und [hier](#für-administratoren))
 
@@ -66,7 +66,7 @@ Die Software des Multimediasystem besteht aus zwei Teilen:
 ### Installation Content-Management-System
 
 Die Container Deklaration welche das gesamte CMS beschreibt befindet sich als Docker Compose-File im Order [directus-container](directus-container).
-Bitte bachten Sie die die gesonderte [Dokumentation](directus-container/README.md).
+Bitte bachten Sie die gesonderte [Dokumentation](directus-container/README.md).
 
 ## Benutzung
 
@@ -122,7 +122,7 @@ Mit angeschlossener Tastatur sind in der Viewer-App folgende Funktionen verfügb
 
 Beim ersten Start der Viewer-App wird eine `config.json` Datei angelegt welche die Standardkonfiguration für lokale SOLO-Stationen enthält. Diese Datei kann mittels Settings-Menü (`F2`) in der Anwendung selbst, oder von Hand editiert werden.
 
-Das Backend besteht aus mehreren Teilen: Zunächst aus einer PostgreSQL Datenbank für alle strukturierte Inhalte, einer Directus basierten REST-API um den Datenbank-Zugriff zu abstrahieren und einer Directus basierten Web-App zur Anwendungsspezifischen Verwaltung der Datenbank-Inhalte und API. Medieninhalte (Videos, Bilder und 3D-Modelle) werden als einfache Dateien vorgehalten und von der Datenbank referenziert. Alle Teile des Backend können als Container auf jedem beliebigen OCI kompatiblen Host eingesetzt werden. Alle notwendigen Konfigurationsparameter sind im [README des Container Stacks](directus-container/README.md) erläutert.
+Das Backend besteht aus mehreren Teilen: Zunächst aus einer PostgreSQL Datenbank für alle strukturierten Inhalte, einer Directus basierten REST-API um den Datenbank-Zugriff zu abstrahieren und einer Directus basierten Web-App zur Anwendungsspezifischen Verwaltung der Datenbank-Inhalte und API. Medieninhalte (Videos, Bilder und 3D-Modelle) werden als einfache Dateien vorgehalten und von der Datenbank referenziert. Alle Teile des Backend können als Container auf jedem beliebigen OCI kompatiblen Host eingesetzt werden. Alle notwendigen Konfigurationsparameter sind im [README des Container Stacks](directus-container/README.md) erläutert.
 
 Die Viewer-Applikation reagiert dynamisch auf Format und Auflösung des angeschlossenen Displays. Dabei sind die CONTROLLER- und SOLO-Rolle für einen Betrieb im 9:16 Format vorgesehen, die OBSERVER-Rolle ist hingegen primär für ein 16:9 Format geeignet.
 
@@ -139,7 +139,7 @@ Die Viewer-Applikation reagiert dynamisch auf Format und Auflösung des angeschl
 
 #### Systemvoraussetzungen - Content-Management-System
 
-Für das Backend ist ein beliebiger OCI- bzw. Docker-fähiger Host notwendig. Die Leistungsfähigkeit hängt vom gewählten Host ab, kann jedoch recht sparsam gewählt werden. Der Host kann sowol lokal als auch in der Cloud betrieben werden.
+Für das Backend ist ein beliebiger OCI- bzw. Docker-fähiger Host notwendig. Die Leistungsfähigkeit hängt vom gewählten Host ab, kann jedoch recht sparsam gewählt werden. Der Host kann sowohl lokal als auch in der Cloud betrieben werden.
 
 - OCI Engine
 - 2+ CPU Cores
@@ -152,21 +152,21 @@ Zur Vernetzung von bis zu fünf Stationen inklusive Backend empfiehlt sich ein v
 
 ## Beteiligung
 
-Eine Fortlaufende Entwicklung der Anwendung ist nicht vorgesehen.
+Eine fortlaufende Entwicklung der Anwendung ist nicht vorgesehen.
 
 ## Credits
 
 ### Auftraggeber
 
 - Senckenberg Museum für Naturkunde Görlitz, Görlitz
-- m-box Bewegtbild GmbH, Berlin
+- m box bewegtbild GmbH, Berlin
 
 TODO: Add Senckenberg Credits
 
 ### Autor und Rechteinhaber
 
 - Gerold Schneider, 2022
-- m-box Bewegtbild GmbH, 2022
+- m box bewegtbild GmbH, 2022
 
 ## Lizenz
 
