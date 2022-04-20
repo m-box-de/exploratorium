@@ -62,7 +62,6 @@ Die Software des Multimediasystem besteht aus zwei Teilen:
 11. Falls das Caching fehlschlägt kann die Viewer-App neu gestartet werden um das Caching an der letzten Position fortzusetzen
 12. Wenn alle Inhalte geladen wurden startet die Viewer-App in den konfigurierten Modus. Je nach Konfiguration müssen ggf. andere Instanzen der Viewer-App parallel gestartet werden (mehr dazu [hier](#für-ausstellungsmoderatoren) und [hier](#für-administratoren))
 
-TODO @Helge : Release package (.zip) verlinken
 
 ### Installation Content-Management-System
 
@@ -73,9 +72,7 @@ Bitte bachten Sie die die gesonderte [Dokumentation](directus-container/README.m
 
 ### Benutzung Content-Management-System
 
-Die Benutzung des Content-Management-Systems ist im [Handbuch](https://link-zum-handbuch.de/) ausführlich beschrieben.
-
-TODO @Helge : Handbuch PDF link einfügen
+Die Benutzung des Content-Management-Systems ist im [Handbuch](assets/exploratorium-cms-manual.pdf) ausführlich beschrieben.
 
 ### Benutzung Viewer-App
 
@@ -125,10 +122,7 @@ Mit angeschlossener Tastatur sind in der Viewer-App folgende Funktionen verfügb
 
 Beim ersten Start der Viewer-App wird eine `config.json` Datei angelegt welche die Standardkonfiguration für lokale SOLO-Stationen enthält. Diese Datei kann mittels Settings-Menü (`F2`) in der Anwendung selbst, oder von Hand editiert werden.
 
-Das Backend besteht aus mehreren Teilen: Zunächst aus einer PostgreSQL Datenbank für alle strukturierte Inhalte, einer Directus basierten REST-API um den Datenbank-Zugriff zu abstrahieren und einer Directus basierten Web-App zur Anwendungsspezifischen Verwaltung der Datenbank-Inhalte und API. Medieninhalte (Videos, Bilder und 3D-Modelle) werden als einfache Dateien vorgehalten und von der Datenbank referenziert. Alle Teile des Backend können als Container auf jedem beliebigen OCI kompatiblen Host eingesetzt werden. Alle notwendigen Konfigurationsparameter sind im README des Container Stacks erläutert. [Link zum Container Repo](http://repos.m-box.de), [Link zur CMS Admin Doku](http://repos.m-box.de)
-
-TODO @Helge: Container link einfügen
-TODO @Helge: Link zur CMS Doku einfügen
+Das Backend besteht aus mehreren Teilen: Zunächst aus einer PostgreSQL Datenbank für alle strukturierte Inhalte, einer Directus basierten REST-API um den Datenbank-Zugriff zu abstrahieren und einer Directus basierten Web-App zur Anwendungsspezifischen Verwaltung der Datenbank-Inhalte und API. Medieninhalte (Videos, Bilder und 3D-Modelle) werden als einfache Dateien vorgehalten und von der Datenbank referenziert. Alle Teile des Backend können als Container auf jedem beliebigen OCI kompatiblen Host eingesetzt werden. Alle notwendigen Konfigurationsparameter sind im [README des Container Stacks](directus-container/README.md) erläutert.
 
 Die Viewer-Applikation reagiert dynamisch auf Format und Auflösung des angeschlossenen Displays. Dabei sind die CONTROLLER- und SOLO-Rolle für einen Betrieb im 9:16 Format vorgesehen, die OBSERVER-Rolle ist hingegen primär für ein 16:9 Format geeignet.
 
