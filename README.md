@@ -43,10 +43,10 @@ Dieses Multimediasystem ist entstanden im Verbundprojekt _museum4punkt0 – Digi
 
 Die Software des Multimediasystems besteht aus zwei Teilen:
 
-- Eine Windows 10 basierte Desktop Applikation, der __Viewer-App__, zur Präsentation und zum interaktiven Erkunden von Medieninhalten
-- Eine Docker/OCI/Linux basierte REST API, WebApp und Datenbank, dem __Content-Management-System__ (CMS), zur Verwaltung aller Inhalte und zur Konfiguration angeschlossener Viewer-App.
+- Eine Windows 10 basierte Desktop Applikation, der [__Viewer-App__](viewer/), zur Präsentation und zum interaktiven Erkunden von Medieninhalten
+- Eine Docker/OCI/Linux basierte REST API, WebApp und Datenbank, dem [__Content-Management-System__](directus-container/) (CMS), zur Verwaltung aller Inhalte und zur Konfiguration angeschlossener Viewer-App.
 
-**Wichtiger Hinweis:** Aus rechtlichen Gründen können keine Medieninhalte in diesem Repository vorgehalten werden und eine Installation wie fortfolgend beschrieben ist ohne diese nicht lauffähig.
+**Wichtiger Hinweis:** Aus rechtlichen Gründen können keine Medieninhalte in diesem Repository vorgehalten werden und eine Installation wie fortfolgend beschrieben ist ohne diese nicht lauffähig. Bei dem Source-Code der Viewer-App im Verzeichnis [viewer](viewer/) handelt es sich um eine reduzierte Version.
 
 ### Installation Viewer-App
 
@@ -161,8 +161,6 @@ Eine fortlaufende Entwicklung der Anwendung ist nicht vorgesehen.
 
 - Senckenberg Museum für Naturkunde Görlitz, Görlitz
 - m box bewegtbild GmbH, Berlin
-
-TODO: Add Senckenberg Credits
 
 ### Autor und Rechteinhaber
 
